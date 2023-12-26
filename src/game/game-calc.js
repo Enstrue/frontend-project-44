@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import getRandomNumber from '../src/index.js';
-import { sayWelcome, getUserName } from '../src/cli.js';
+import getRandomNumber from '../index.js';
+import { sayWelcome, getUserName } from '../cli.js';
 
 const displayGameRules = () => console.log('What is the result of the expression?');
 const operators = ['+', '*'];

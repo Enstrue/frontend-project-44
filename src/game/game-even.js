@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import getRandomNumber from '../src/index.js';
-import { sayWelcome, getUserName } from '../src/cli.js';
+import getRandomNumber from '../index.js';
+import { sayWelcome, getUserName } from '../cli.js';
 
 const isEven = (number) => number % 2 === 0;
 const isCorrectAnswer = (number) => (isEven(number) ? 'yes' : 'no');

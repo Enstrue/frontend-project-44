@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import playRound from '../game/game-calc.js';
+import playRound from '../src/game/game-calc.js';
 
 playRound();
