@@ -9,27 +9,27 @@ const displayGameRules = () => console.log('Answer "yes" if the number is even, 
 const getUserAnswer = (randomNumber) => readlineSync.question(`Question: ${randomNumber}\nYour answer: `);
 
 const playRound = () => {
-    sayWelcome();
-    const userName = getUserName();
-    displayGameRules();
+  sayWelcome();
+  const userName = getUserName();
+  displayGameRules();
 
-    let correctAnswerCount = 0;
-    while (correctAnswerCount < 3) {
-        const randomNumber = getRandomNumber();
-        const userAnswer = getUserAnswer(randomNumber);
-        const correctAnswer = isCorrectAnswer(randomNumber);
+  let correctAnswerCount = 0;
+  while (correctAnswerCount < 3) {
+    const randomNumber = getRandomNumber();
+    const userAnswer = getUserAnswer(randomNumber);
+    const correctAnswer = isCorrectAnswer(randomNumber);
 
-        if (userAnswer === correctAnswer) {
-            console.log('Correct!');
-            correctAnswerCount += 1;
-        } else {
-            console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${isCorrectAnswer(randomNumber)}.\nLet's try again, ${userName}`);
-            break;
-        }
-        if (correctAnswerCount === 3) {
-            console.log(`Congratulations, ${userName}!`);
-        }
+    if (userAnswer === correctAnswer) {
+      console.log('Correct!');
+      correctAnswerCount += 1;
+    } else {
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${isCorrectAnswer(randomNumber)}.\nLet's try again, ${userName}`);
+      break;
     }
+    if (correctAnswerCount === 3) {
+      console.log(`Congratulations, ${userName}!`);
+    }
+  }
 };
 
 playRound();
