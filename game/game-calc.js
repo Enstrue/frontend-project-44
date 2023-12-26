@@ -44,5 +44,4 @@ const playRound = () => {
     }
   }
 };
-
 export default playRound;
