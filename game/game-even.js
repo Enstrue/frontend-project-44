@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
-import { sayWelcome, getUserName, getRandomNumber } from '../src/index.js';
+import getRandomNumber from '../src/index.js';
+import { sayWelcome, getUserName } from '../src/cli.js';
 
 const isEven = (number) => number % 2 === 0;
 const isCorrectAnswer = (number) => (isEven(number) ? 'yes' : 'no');
@@ -29,4 +30,4 @@ const playRound = () => {
     }
   }
 };
-export default playRound();
+export default playRound;
