@@ -8,3 +8,5 @@
 <a href ="https://asciinema.org/a/YRDoW0Uxip2jsE9LGUWwUOcjK">Аскинема тестирования brain-calc.js</a>
 
 <a href ="https://asciinema.org/a/0GSwjXHYkQGTbo30gI7SNRaBq">Аскинема тестирования brain-gcd.js</a>
+
+<a href ="https://asciinema.org/a/IcICe90RSZCObMn4hCOAIjUZ5">Аскинема тестирования brain-progression.js</a>
