@@ -1,4 +1,4 @@
 import _ from 'lodash';
 
-const getRandomNumber = () => _.random(0, 100);
+const getRandomNumber = (x = 0, y = 100) => _.random(x, y);
 export default getRandomNumber;
