@@ -6,3 +6,5 @@
 <a href ="https://asciinema.org/a/sgIkzdoS7VEghfhv1logWpIab">Аскинема тестирования brain-even.js</a>
 
 <a href ="https://asciinema.org/a/YRDoW0Uxip2jsE9LGUWwUOcjK">Аскинема тестирования brain-calc.js</a>
+
+<a href ="https://asciinema.org/a/0GSwjXHYkQGTbo30gI7SNRaBq">Аскинема тестирования brain-gcd.js</a>
