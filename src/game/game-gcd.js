@@ -8,7 +8,7 @@ const getArrayOfDividers = (randomNumber1, randomNumber2) => {
   const empyArray = [];
   const smallerRandomNumber = Math.min(randomNumber1, randomNumber2);
 
-  for (let j = 1; j < smallerRandomNumber; j += 1) {
+  for (let j = 1; j <= smallerRandomNumber; j += 1) {
     if (randomNumber1 % j === 0 && randomNumber2 % j === 0) {
       empyArray.push(j);
     }
