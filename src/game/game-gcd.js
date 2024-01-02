@@ -6,14 +6,12 @@ const displayGameRules = () => console.log('Find the greatest common divisor of 
 const getUserAnswer = (randomNumber1, randomNumber2) => readlineSync.question(`Question: ${randomNumber1} ${randomNumber2}\nYour answer: `);
 const getArrayOfDividers = (randomNumber1, randomNumber2) => {
   const empyArray = [];
-  let greaterRandomNumber;
-  if (+randomNumber1 > +randomNumber2) {
-    greaterRandomNumber = +randomNumber1;
-  } else if (+randomNumber1 < +randomNumber2) {
-    greaterRandomNumber = +randomNumber2;
-  }
-  for (let j = 1; j < greaterRandomNumber; j += 1) {
-    empyArray.push(j);
+  const smallerRandomNumber = Math.min(randomNumber1, randomNumber2);
+
+  for (let j = 1; j < smallerRandomNumber; j += 1) {
+    if (randomNumber1 % j === 0 && randomNumber2 % j === 0) {
+      empyArray.push(j);
+    }
   }
   return empyArray;
 };
