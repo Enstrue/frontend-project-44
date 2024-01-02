@@ -6,8 +6,9 @@ const displayGameRules = () => console.log('What number is missing in the progre
 const getUserAnswer = (question) => readlineSync.question(`Question: ${question} \nYour answer: `);
 const getArrayOfNumbers = (initialNumber, progressionStep) => {
   const empyArray = [];
+  const countOfArrayItems = 10;
 
-  for (let i = 0; i < 9; i += 1) {
+  for (let i = 0; i < countOfArrayItems; i += 1) {
     empyArray.push(initialNumber + i * progressionStep);
   }
   return empyArray;
@@ -18,12 +19,12 @@ const playRound = () => {
   const userName = getUserName();
   displayGameRules();
 
-  const randomIndex = getRandomNumber(0, 9);
   let correctAnswerCount = 0;
   while (correctAnswerCount < 3) {
     const initialNumber = getRandomNumber(0, 20);
     const progressionStep = getRandomNumber(1, 10);
     const arrayOfProgression = getArrayOfNumbers(initialNumber, progressionStep);
+    const randomIndex = getRandomNumber(0, arrayOfProgression.length);
 
     const temp = arrayOfProgression[randomIndex];
     arrayOfProgression[randomIndex] = '..';
