@@ -22,7 +22,7 @@ const getUserAnswer = (randomNumber) => {
   let userAnswer;
 
   do {
-    console.log('Answer "yes" if the number is prime. Otherwise answer "no".');
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     userAnswer = readlineSync.question(`Question: ${randomNumber}\nYour answer: `);
   } while (!userAnswer);
 
