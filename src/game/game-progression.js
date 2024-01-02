@@ -24,7 +24,7 @@ const playRound = () => {
     const initialNumber = getRandomNumber(0, 20);
     const progressionStep = getRandomNumber(1, 10);
     const arrayOfProgression = getArrayOfNumbers(initialNumber, progressionStep);
-    const randomIndex = getRandomNumber(0, arrayOfProgression.length);
+    const randomIndex = getRandomNumber(0, arrayOfProgression.length - 1);
 
     const temp = arrayOfProgression[randomIndex];
     arrayOfProgression[randomIndex] = '..';
