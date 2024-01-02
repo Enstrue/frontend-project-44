@@ -22,7 +22,7 @@ const playRound = () => {
   let correctAnswerCount = 0;
   while (correctAnswerCount < 3) {
     const initialNumber = getRandomNumber(0, 20);
-    const progressionStep = getRandomNumber(0, 10);
+    const progressionStep = getRandomNumber(1, 10);
     const arrayOfProgression = getArrayOfNumbers(initialNumber, progressionStep);
 
     const temp = arrayOfProgression[randomIndex];
