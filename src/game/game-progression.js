@@ -3,7 +3,7 @@ import getRandomNumber from '../index.js';
 import { sayWelcome, getUserName } from '../cli.js';
 
 const displayGameRules = () => console.log('What number is missing in the progression?');
-const getUserAnswer = (question) => readlineSync.question(`Question: ${question}\nYour answer: `);
+const getUserAnswer = (question) => readlineSync.question(`Question: ${question} \nYour answer: `);
 const getArrayOfNumbers = (initialNumber, progressionStep) => {
   const empyArray = [];
 
@@ -27,7 +27,7 @@ const playRound = () => {
 
     const temp = arrayOfProgression[randomIndex];
     arrayOfProgression[randomIndex] = '..';
-    const userAnswer = getUserAnswer(arrayOfProgression);
+    const userAnswer = getUserAnswer(arrayOfProgression.join(' '));
 
     if (+userAnswer === temp) {
       correctAnswerCount += 1;
