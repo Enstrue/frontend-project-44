@@ -22,7 +22,7 @@ const playRound = () => {
       console.log('Correct!');
       correctAnswerCount += 1;
     } else {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${isCorrectAnswer(randomNumber)}.\nLet's try again, ${userName}`);
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${isCorrectAnswer(randomNumber)}.\nLet's try again, ${userName}!`);
       break;
     }
     if (correctAnswerCount === 3) {
