@@ -31,7 +31,7 @@ const playRound = () => {
     const arrayOfDividers = getArrayOfDividers(randomNumber1, randomNumber2);
     let greaterDivider = 1;
 
-    for (let i = 1; i < arrayOfDividers.length; i += 1) {
+    for (let i = 0; i < arrayOfDividers.length; i += 1) {
       if (randomNumber1 % arrayOfDividers[i] === 0 && randomNumber2 % arrayOfDividers[i] === 0) {
         greaterDivider = arrayOfDividers[i];
       }
