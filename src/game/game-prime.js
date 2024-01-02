@@ -24,10 +24,6 @@ const getUserAnswer = (randomNumber) => {
 
   do {
     userAnswer = readlineSync.question(`Question: ${randomNumber}\nYour answer: `);
-
-    if (!userAnswer) {
-      console.log('Answer "yes" if the number is prime, otherwise answer "no".');
-    }
   } while (!userAnswer);
 
   return userAnswer;
@@ -48,7 +44,7 @@ const playRound = () => {
       console.log('Correct!');
       correctAnswerCount += 1;
     } else {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${isCorrectAnswer(randomNumber)}.\nLet's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${isCorrectAnswer(randomNumber)}'.\nLet's try again, ${userName}!`);
       break;
     }
     if (correctAnswerCount === 3) {
