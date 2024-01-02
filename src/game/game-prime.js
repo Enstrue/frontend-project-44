@@ -18,11 +18,11 @@ const isPrime = (number) => {
 };
 
 const isCorrectAnswer = (number) => (isPrime(number) === 2 ? 'yes' : 'no');
-const displayGameRules = () => console.log('Answer "yes" if the number is prime, otherwise answer "no".');
 const getUserAnswer = (randomNumber) => {
   let userAnswer;
 
   do {
+    console.log('Answer "yes" if the number is prime, otherwise answer "no".');
     userAnswer = readlineSync.question(`Question: ${randomNumber}\nYour answer: `);
   } while (!userAnswer);
 
@@ -32,7 +32,6 @@ const getUserAnswer = (randomNumber) => {
 const playRound = () => {
   sayWelcome();
   const userName = getUserName();
-  displayGameRules();
 
   let correctAnswerCount = 0;
   while (correctAnswerCount < 3) {
