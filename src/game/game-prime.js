@@ -2,7 +2,6 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../index.js';
 import { sayWelcome, getUserName } from '../cli.js';
 
-// const isPrime = (number) => number % 1 === 0 && number % number === 0;
 const isPrime = (number) => {
   const empyArray = [];
   const stack = [];
@@ -20,7 +19,19 @@ const isPrime = (number) => {
 
 const isCorrectAnswer = (number) => (isPrime(number) === 2 ? 'yes' : 'no');
 const displayGameRules = () => console.log('Answer "yes" if the number is prime, otherwise answer "no".');
-const getUserAnswer = (randomNumber) => readlineSync.question(`Question: ${randomNumber}\nYour answer: `);
+const getUserAnswer = (randomNumber) => {
+  let userAnswer;
+
+  do {
+    userAnswer = readlineSync.question(`Question: ${randomNumber}\nYour answer: `);
+
+    if (!userAnswer) {
+      console.log('Answer "yes" if the number is prime, otherwise answer "no".');
+    }
+  } while (!userAnswer);
+
+  return userAnswer;
+};
 
 const playRound = () => {
   sayWelcome();
