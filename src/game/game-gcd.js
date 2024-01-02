@@ -25,8 +25,8 @@ const playRound = () => {
 
   let correctAnswerCount = 0;
   while (correctAnswerCount < 3) {
-    const randomNumber1 = getRandomNumber();
-    const randomNumber2 = getRandomNumber();
+    const randomNumber1 = getRandomNumber(1, 100);
+    const randomNumber2 = getRandomNumber(1, 100);
     const userAnswer = getUserAnswer(randomNumber1, randomNumber2);
     const arrayOfDividers = getArrayOfDividers(randomNumber1, randomNumber2);
     let greaterDivider = 1;
