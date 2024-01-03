@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import getRandomNumber from '../index.js';
+import getRandomNumber from '../random-number.js';
 import { sayWelcome, getUserName } from '../cli.js';
 
 const isPrime = (number) => {
