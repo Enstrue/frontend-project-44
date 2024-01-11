@@ -9,12 +9,12 @@ const generateQuestionAndAnswer = () => {
 
   const question = `${randomNumber1} ${randomNumber2}`;
 
-  const getArrayOfDividers = () => {
+  const getArrayOfDividers = (num1, num2) => {
     const empyArray = [];
-    const smallerRandomNumber = Math.min(randomNumber1, randomNumber2);
+    const smallerRandomNumber = Math.min(num1, num2);
 
     for (let j = 1; j <= smallerRandomNumber; j += 1) {
-      if (randomNumber1 % j === 0 && randomNumber2 % j === 0) {
+      if (num1 % j === 0 && num2 % j === 0) {
         empyArray.push(j);
       }
     }
@@ -22,13 +22,8 @@ const generateQuestionAndAnswer = () => {
   };
 
   const arrayOfDividers = getArrayOfDividers(randomNumber1, randomNumber2);
-  let greaterDivider = 1;
+  const greaterDivider = Math.max(...arrayOfDividers);
 
-  for (let i = 0; i < arrayOfDividers.length; i += 1) {
-    if (randomNumber1 % arrayOfDividers[i] === 0 && randomNumber2 % arrayOfDividers[i] === 0) {
-      greaterDivider = arrayOfDividers[i];
-    }
-  }
   const correctAnswer = greaterDivider;
   return { question, correctAnswer };
 };
