@@ -2,27 +2,25 @@ import getRandomNumber from '../random-number.js';
 import playGame from '../index.js';
 
 const gameRules = 'Find the greatest common divisor of given numbers.';
+const getArrayOfDividers = (num) => {
+  const dividers = [];
+  for (let i = 1; i <= num; i += 1) {
+    if (num % i === 0) {
+      dividers.push(i);
+    }
+  }
+  return dividers;
+};
 
 const generateQuestionAndAnswer = () => {
   const randomNumber1 = getRandomNumber(1, 100);
   const randomNumber2 = getRandomNumber(1, 100);
-
   const question = `${randomNumber1} ${randomNumber2}`;
 
-  const getArrayOfDividers = (num1, num2) => {
-    const empyArray = [];
-    const smallerRandomNumber = Math.min(num1, num2);
-
-    for (let j = 1; j <= smallerRandomNumber; j += 1) {
-      if (num1 % j === 0 && num2 % j === 0) {
-        empyArray.push(j);
-      }
-    }
-    return empyArray;
-  };
-
-  const arrayOfDividers = getArrayOfDividers(randomNumber1, randomNumber2);
-  const greaterDivider = Math.max(...arrayOfDividers);
+  const arrayOfDividers1 = getArrayOfDividers(randomNumber1);
+  const arrayOfDividers2 = getArrayOfDividers(randomNumber2);
+  const commonDividers = arrayOfDividers1.filter((divider) => arrayOfDividers2.includes(divider));
+  const greaterDivider = Math.max(...commonDividers);
 
   const correctAnswer = greaterDivider;
   return { question, correctAnswer };
