@@ -1,33 +1,15 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../random-number.js';
-import { sayWelcome, getUserName } from '../cli.js';
+import playGame from '../index.js';
 
-const isEven = (number) => number % 2 === 0;
-const isCorrectAnswer = (number) => (isEven(number) ? 'yes' : 'no');
-const displayGameRules = () => console.log('Answer "yes" if the number is even, otherwise answer "no".');
-const getUserAnswer = (randomNumber) => readlineSync.question(`Question: ${randomNumber}\nYour answer: `);
+const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const playRound = () => {
-  sayWelcome();
-  const userName = getUserName();
-  displayGameRules();
-
-  let correctAnswerCount = 0;
-  while (correctAnswerCount < 3) {
-    const randomNumber = getRandomNumber();
-    const userAnswer = getUserAnswer(randomNumber);
-    const correctAnswer = isCorrectAnswer(randomNumber);
-
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      correctAnswerCount += 1;
-    } else {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${isCorrectAnswer(randomNumber)}.\nLet's try again, ${userName}!`);
-      break;
-    }
-    if (correctAnswerCount === 3) {
-      console.log(`Congratulations, ${userName}!`);
-    }
-  }
+const generateQuestionAndAnswer = () => {
+  const randomNumber = getRandomNumber();
+  const question = `${randomNumber}`;
+  const isEven = (number) => number % 2 === 0;
+  const isCorrectAnswer = (number) => (isEven(number) ? 'yes' : 'no');
+  const correctAnswer = isCorrectAnswer(randomNumber);
+  return { question, correctAnswer };
 };
-export default playRound;
+
+export default () => playGame(gameRules, generateQuestionAndAnswer);
