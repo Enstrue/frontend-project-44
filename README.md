@@ -20,12 +20,12 @@ make install
 ## Usage examples
 
 ### Definition of an even number.
-[![asciicast](https://asciinema.org/a/sgIkzdoS7VEghfhv1logWpIab.svg)](https://asciinema.org/a/sgIkzdoS7VEghfhv1logWpIab)
+[![asciicast](https://asciinema.org/a/CevzRPtMmhx3wNmLxvayKgkDw.svg)](https://asciinema.org/a/CevzRPtMmhx3wNmLxvayKgkDw)
 ### Calculator. Arithmetic expressions to be evaluated.
-[![asciicast](https://asciinema.org/a/YRDoW0Uxip2jsE9LGUWwUOcjK.svg)](https://asciinema.org/a/YRDoW0Uxip2jsE9LGUWwUOcjK)
+[![asciicast](https://asciinema.org/a/26BXWvKSV9UVaZXboJUSFaen1.svg)](https://asciinema.org/a/26BXWvKSV9UVaZXboJUSFaen1)
 ### Determination of the greatest common divisor.
-[![asciicast](https://asciinema.org/a/0GSwjXHYkQGTbo30gI7SNRaBq.svg)](https://asciinema.org/a/0GSwjXHYkQGTbo30gI7SNRaBq)
+[![asciicast](https://asciinema.org/a/azpGunyCA3GVALeOcDXYoclS2.svg)](https://asciinema.org/a/azpGunyCA3GVALeOcDXYoclS2)
 ### Progression. Finds missing numbers in a sequence of numbers.
-[![asciicast](https://asciinema.org/a/IcICe90RSZCObMn4hCOAIjUZ5.svg)](https://asciinema.org/a/IcICe90RSZCObMn4hCOAIjUZ5)
+[![asciicast](https://asciinema.org/a/W23uRtfz1XAHgOnjqicmaoWjH.svg)](https://asciinema.org/a/W23uRtfz1XAHgOnjqicmaoWjH)
 ### Definition of a prime number.
-[![asciicast](https://asciinema.org/a/10NuGzf1VfH4t2cqEszThmlpD.svg)](https://asciinema.org/a/10NuGzf1VfH4t2cqEszThmlpD)
+[![asciicast](https://asciinema.org/a/vQpWUyXb6iicri6TQJ73wGIKN.svg)](https://asciinema.org/a/vQpWUyXb6iicri6TQJ73wGIKN)
