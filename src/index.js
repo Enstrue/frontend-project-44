@@ -9,13 +9,14 @@ const playGame = (gameRules, generateQuestionAndAnswer) => {
   while (correctAnswerCount < 3) {
     const { question, correctAnswer } = generateQuestionAndAnswer();
     const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
+    const errorMessage = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
     const userAnswerAsNumber = +userAnswer;
 
     if (userAnswer === correctAnswer || userAnswerAsNumber === correctAnswer) {
       correctAnswerCount += 1;
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+      console.log(errorMessage);
       break;
     }
   }
