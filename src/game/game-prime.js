@@ -2,28 +2,24 @@ import getRandomNumber from '../random-number.js';
 import playGame from '../index.js';
 
 const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const isPrime = (number) => {
+  if (number < 2) {
+    return false;
+  }
+  const dividerLimit = Math.sqrt(number);
+
+  for (let i = 2; i <= dividerLimit; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
 
 const generateQuestionAndAnswer = () => {
   const randomNumber = getRandomNumber(2, 100);
   const question = `${randomNumber}`;
-
-  const isPrime = (number) => {
-    const empyArray = [];
-    const stack = [];
-    for (let i = 1; i <= number; i += 1) {
-      empyArray.push(i);
-    }
-
-    for (let j = 0; j < empyArray.length; j += 1) {
-      if (number % empyArray[j] === 0) {
-        stack.push(j);
-      }
-    }
-    return stack.length;
-  };
-
-  const isCorrectAnswer = (number) => (isPrime(number) === 2 ? 'yes' : 'no');
-  const correctAnswer = isCorrectAnswer(randomNumber);
+  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
 
   return { question, correctAnswer };
 };
