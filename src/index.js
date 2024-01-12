@@ -11,9 +11,8 @@ const playGame = (gameRules, generateQuestionAndAnswer) => {
     const { question, correctAnswer } = generateQuestionAndAnswer();
     const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
     const errorMessage = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
-    const userAnswerAsNumber = +userAnswer;
 
-    if (userAnswer === correctAnswer || userAnswerAsNumber === correctAnswer) {
+    if (userAnswer === correctAnswer.toString()) {
       correctAnswerCount += 1;
       console.log('Correct!');
     } else {
