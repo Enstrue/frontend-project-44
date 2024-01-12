@@ -17,10 +17,8 @@ const playGame = (gameRules, generateQuestionAndAnswer) => {
       console.log('Correct!');
     } else {
       console.log(errorMessage);
-      break;
+      return;
     }
-  }
-  if (correctAnswerCount === 3) {
     console.log(`Congratulations, ${userName}!`);
   }
 };
