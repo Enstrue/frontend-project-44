@@ -2,20 +2,17 @@ import getRandomNumber from '../random-number.js';
 import playGame from '../index.js';
 
 const gameRules = 'What is the result of the expression?';
-
-const generateQuestionAndAnswer = () => {
+const getRandomOperator = () => {
   const operators = ['+', '*'];
-  const getRandomOperator = () => {
-    const randomIndex = Math.floor(Math.random() * operators.length);
-    const randomOperator = operators[randomIndex];
-    return randomOperator;
-  };
+  const randomIndex = Math.floor(Math.random() * operators.length);
+  const randomOperator = operators[randomIndex];
+  return randomOperator;
+};
 
+const calculate = () => {
   const randomNumber1 = getRandomNumber(1, 10);
   const randomNumber2 = getRandomNumber(1, 10);
   const currentOperator = getRandomOperator();
-
-  const question = `${randomNumber1} ${currentOperator} ${randomNumber2}`;
   let correctAnswer = 0;
 
   switch (currentOperator) {
@@ -27,6 +24,17 @@ const generateQuestionAndAnswer = () => {
       break;
     default:
   }
+
+  return {
+    randomNumber1, randomNumber2, currentOperator, correctAnswer,
+  };
+};
+
+const generateQuestionAndAnswer = () => {
+  const {
+    randomNumber1, currentOperator, randomNumber2, correctAnswer,
+  } = calculate();
+  const question = `${randomNumber1} ${currentOperator} ${randomNumber2}`;
   return { question, correctAnswer };
 };
 
