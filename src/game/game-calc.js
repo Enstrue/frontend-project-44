@@ -23,6 +23,7 @@ const calculate = () => {
       correctAnswer = randomNumber1 * randomNumber2;
       break;
     default:
+      throw new Error(`Unknown current operator: '${currentOperator}'!`);
   }
 
   return {
